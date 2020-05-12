@@ -5,6 +5,17 @@ row_4 = ['Temple Run', 0.0, 'USD', 1724546, 4.5]
 row_5 = ['Pandora - Music & Radio', 0.0, 'USD', 1126879, 4.0]
 
 app_data_set = [row_1, row_2, row_3, row_4, row_5]  # list of lists
+rating_sum = 0
 
-for elem in app_data_set:      #using for loop printing each list
-    print(elem)
+for each_list in app_data_set:   
+    print(each_list)                # printing each list using for loop
+    name_rating = each_list[0:4]
+    print(name_rating)
+    rating = each_list[-1]
+    rating_sum = rating_sum + rating
+    print('rating_sum : ',rating_sum)
+    
+print('final rating_sum : ',rating_sum)   
+print('lenght of app_data_set : ',len(app_data_set))    
+avg_rating = rating_sum / len(app_data_set)
+print('average rating : ', avg_rating)
